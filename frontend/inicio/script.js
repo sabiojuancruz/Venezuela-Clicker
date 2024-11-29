@@ -1,15 +1,17 @@
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+const usernameInputR = document.getElementById('username-registro');
+const passwordInputR = document.getElementById('password-registro');
+const usernameInputL = document.getElementById('username-login');
+const passwordInputL = document.getElementById('password-login');
 
-document.getElementById('submit').addEventListener('click', () => {
-    if (!usernameInput || !passwordInput) {
+document.getElementById('submit-registro').addEventListener('click', () => {
+    if (!usernameInputR || !passwordInputR) {
         console.error('Los campos no existen en el DOM');
         return;
     }
 
     const datos = {
-        username: usernameInput.value.trim(),
-        password: passwordInput.value.trim(),
+        username: usernameInputR.value.trim(),
+        password: passwordInputR.value.trim(),
     };
 
     if (!datos.username || !datos.password) {
