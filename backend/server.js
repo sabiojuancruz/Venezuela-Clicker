@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors());
-app.use(express.json())
+app.use(express.json());
 
 app.post('/register', (req, res) => {
     const datosRegistro = req.body;
@@ -71,6 +71,7 @@ app.post('/register', (req, res) => {
 
         // Guardar en el archivo
         fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
+        fs.writeFileSync('data/gamedata.json', JSON.stringify(datosUsuario, null, 2));
         console.log('Usuario creado correctamente');
         res.send({ ok: true, mensaje: 'Usuario registrado' });
     } catch (err) {
@@ -87,8 +88,7 @@ app.post('/login', (req, res) => {
     try {
         if (isOk) {
             const user = users.find((user) => user.datosCuenta.username === datosLogin.username)
-            const gamedata = user.datosJuego
-            fs.writeFileSync('data/gamedata.json', JSON.stringify(gamedata, null, 2))
+            fs.writeFileSync('data/gamedata.json', JSON.stringify(user, null, 2))
     
             res.send({ok: true, mensaje: 'Usuario logeado'})
         }
@@ -100,6 +100,26 @@ app.post('/login', (req, res) => {
         res.status(500).send({ ok: false, mensaje: 'Error interno del servidor' });
     }
 });
+
+app.get('/enviar-datos', (req, res) => {
+    const datos = JSON.parse(fs.readFileSync('data/gamedata.json'))
+    res.send(datos)
+});
+
+app.post('/save', (req, res) => {
+    try {
+        const datosNuevos = req.body;
+        const users = JSON.parse(fs.readFileSync('data/users.json'))
+        const userIndex = users.findIndex(user => user.datosCuenta.username === datosNuevos.datosCuenta.username)
+        users[userIndex] = datosNuevos
+        fs.writeFileSync('data/gamedata.json', JSON.stringify(datosNuevos, null, 2))
+        fs.writeFileSync('data/users.json', JSON.stringify(users, null, 2))
+        res.send({ok: true, hola: userIndex})
+    } catch (err) {
+        res.send({ok: false})
+    }
+
+})
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);

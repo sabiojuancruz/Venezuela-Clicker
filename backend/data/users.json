@@ -1,6 +1,41 @@
 [
   {
-    "username": "juansabio",
-    "password": "cruz2008"
+    "datosCuenta": {
+      "username": "pancho25goat",
+      "password": "25panchos"
+    },
+    "datosJuego": {
+      "coins": 0,
+      "cps": 1,
+      "mejoras": {
+        "mejora1": false,
+        "mejora2": false,
+        "mejora3": false,
+        "mejora4": false
+      },
+      "edificios": {
+        "areperas": {
+          "nombre": "Areperas",
+          "descripcion": "Pequeños locales que producen arepas.",
+          "cantidad": 0,
+          "produccion": 0.1,
+          "precio": 15
+        },
+        "empanaderas": {
+          "nombre": "Puesto de empanadas",
+          "descripcion": "Ventas callejeras de empanadas.",
+          "cantidad": 0,
+          "produccion": 1,
+          "precio": 100
+        },
+        "parrilla": {
+          "nombre": "Parrilla",
+          "descripcion": "Puestos que venden carne asada.",
+          "cantidad": 0,
+          "produccion": 8,
+          "precio": 1100
+        }
+      }
+    }
   }
 ]

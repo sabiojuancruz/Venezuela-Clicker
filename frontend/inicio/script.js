@@ -35,6 +35,50 @@ document.getElementById('submit-registro').addEventListener('click', () => {
         .then((data) => {
             if (data.ok) {
                 alert('Usuario registrado con éxito');
+                window.location.href = '../game/index.html'
+            } else {
+                alert(`Error: ${data.mensaje}`);
+            }
+        })
+        .catch((error) => {
+            console.error('Error en la solicitud:', error.message);
+            alert(`Hubo un problema: ${error.message}`);
+        });    
+});
+
+document.getElementById('submit-login').addEventListener('click', () => {
+    if (!usernameInputL || !passwordInputL) {
+        console.error('Los campos no existen en el DOM');
+        return;
+    }
+
+    const datos = {
+        username: usernameInputL.value.trim(),
+        password: passwordInputL.value.trim(),
+    };
+
+    if (!datos.username || !datos.password) {
+        alert('Por favor, completa todos los campos');
+        return;
+    }
+
+    fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(datos),
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            if (data.ok) {
+                alert('Usuario logeado con éxito');
+                window.location.href = '../game/index.html'
             } else {
                 alert(`Error: ${data.mensaje}`);
             }
