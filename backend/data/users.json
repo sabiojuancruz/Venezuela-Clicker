@@ -5,13 +5,25 @@
       "password": "25panchos"
     },
     "datosJuego": {
-      "coins": 0,
+      "coins": 40,
       "cps": 1,
       "mejoras": {
-        "mejora1": false,
-        "mejora2": false,
-        "mejora3": false,
-        "mejora4": false
+        "mejora1": {
+          "precio": 1,
+          "ok": false
+        },
+        "mejora2": {
+          "precio": 10,
+          "ok": false
+        },
+        "mejora3": {
+          "precio": 100,
+          "ok": false
+        },
+        "mejora4": {
+          "precio": 1000,
+          "ok": false
+        }
       },
       "edificios": {
         "areperas": {

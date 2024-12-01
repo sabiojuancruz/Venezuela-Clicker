@@ -4,7 +4,7 @@
     "password": "25panchos"
   },
   "datosJuego": {
-    "coins": 0,
+    "coins": 40,
     "cps": 1,
     "mejoras": {
       "mejora1": false,

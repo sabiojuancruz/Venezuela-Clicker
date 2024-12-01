@@ -1,3 +1,7 @@
+//html
+let loading_screen = document.getElementById('loading-screen');
+let coin_count = document.getElementById('bolivares');
+
 let datos = [];
 
 async function obtenerDatos() {
@@ -5,7 +9,6 @@ async function obtenerDatos() {
         const response = await fetch('http://localhost:3000/enviar-datos');
         const data = await response.json();
         datos = data
-        console.log('Datos dentro de obtenerDatos:', datos);
     } catch (error) {
         console.error('Error al obtener los datos:', error);
     }
@@ -13,7 +16,10 @@ async function obtenerDatos() {
 
 window.onload = async () => {
     await obtenerDatos(); 
-    console.log('Datos fuera de window.onload:', datos); 
+    console.log(datos)
+
+    coin_count.textContent = datos.datosJuego.coins
+    loading_screen.style.display = 'none'
 };
 
 document.getElementById('save').addEventListener('click', () => {
@@ -36,5 +42,5 @@ document.getElementById('save').addEventListener('click', () => {
 
 document.getElementById('coin').addEventListener('click', () => {
     datos.datosJuego.coins += 1;
-    console.log(datos)
+    coin_count.textContent = datos.datosJuego.coins
 });
