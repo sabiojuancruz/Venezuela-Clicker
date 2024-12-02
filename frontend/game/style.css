@@ -38,3 +38,12 @@ body {
         }
     }
 }
+
+.building {
+    width: 30%;
+    border: solid;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -17,19 +17,19 @@ app.post('/register', (req, res) => {
             "mejoras": {
                 "mejora1": {
                   "precio": 1,
-                  "ok": false
+                  "unlocked": false
                 },
                 "mejora2": {
                   "precio": 10,
-                  "ok": false
+                  "unlocked": false
                 },
                 "mejora3": {
                   "precio": 100,
-                  "ok": false
+                  "unlocked": false
                 },
                 "mejora4": {
                   "precio": 1000,
-                  "ok": false
+                  "unlocked": false
                 }
             },
             "edificios": {

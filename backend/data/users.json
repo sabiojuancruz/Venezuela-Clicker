@@ -5,31 +5,31 @@
       "password": "25panchos"
     },
     "datosJuego": {
-      "coins": 40,
-      "cps": 1,
+      "coins": 16,
+      "cps": 0.4,
       "mejoras": {
         "mejora1": {
           "precio": 1,
-          "ok": false
+          "unlocked": false
         },
         "mejora2": {
           "precio": 10,
-          "ok": false
+          "unlocked": false
         },
         "mejora3": {
           "precio": 100,
-          "ok": false
+          "unlocked": false
         },
         "mejora4": {
           "precio": 1000,
-          "ok": false
+          "unlocked": false
         }
       },
       "edificios": {
         "areperas": {
           "nombre": "Areperas",
           "descripcion": "Pequeños locales que producen arepas.",
-          "cantidad": 0,
+          "cantidad": 4,
           "produccion": 0.1,
           "precio": 15
         },
