@@ -3,13 +3,14 @@ const loading_screen = document.getElementById('loading-screen');
 const coin_count = document.getElementById('bolivares_count');
 const building_container = document.getElementById('building-container')
 const cps_count = document.getElementById('cps_count')
+const mejoras_container = document.getElementById('mejoras_container')
 
 //variables funcionalidad
 let datos = [];
 
 //funciones html
 function cargarEdificios(datos) {
-    building_container.innerHTML = "";
+    building_container.innerHTML = "<h2>Edificios</h2>";
     let edificios = datos.datosJuego.edificios
 
     for (edificio in edificios) {
@@ -33,9 +34,32 @@ function cargarEdificios(datos) {
     }
 }
 
+function cargarMejoras(datos) {
+    mejoras_container.innerHTML = "<h2>Mejoras</h2>";
+    let mejoras = datos.datosJuego.mejoras
+
+    for (mejora in mejoras) {
+        let mejora_data = mejoras[mejora]
+
+        if (!mejora_data.unlocked) {
+            const div = document.createElement('div');
+            div.textContent = mejora;
+    
+            const price = document.createElement('p');
+            price.textContent = `Precio: ${mejora_data.precio}`;
+
+            div.classList.add('mejora')
+            div.appendChild(price);
+            div.addEventListener('click', () => comprarMejora(mejora_data))
+
+            mejoras_container.appendChild(div)
+        }
+    }
+}
+
 function cargarDatosJugador(datos) {
-    coin_count.textContent = datos.datosJuego.coins
-    cps_count.textContent = datos.datosJuego.cps
+    coin_count.textContent = Math.floor(datos.datosJuego.coins)
+    cps_count.textContent = Math.round(datos.datosJuego.cps * 10) / 10
 }
 
 //funcionalidad del juego 
@@ -68,19 +92,49 @@ function save() {
 }
 
 function click() {
-    datos.datosJuego.coins += 1;
-    coin_count.textContent = datos.datosJuego.coins
+    datos.datosJuego.coins += datos.datosJuego.cpc;
+    cargarDatosJugador(datos)
+}
+
+function calcularCPS() {
+    let edificios = Object.values(datos.datosJuego.edificios)
+    datos.datosJuego.cps = edificios.reduce((total, edificio) => total + edificio.cantidad * edificio.produccion, 0);
 }
 
 function comprarEdificio(edificio) {
     if (datos.datosJuego.coins >= edificio.precio) {
         datos.datosJuego.coins -= edificio.precio
         edificio.cantidad += 1
-        datos.datosJuego.cps += edificio.produccion
-
+        edificio.precio = Math.ceil(edificio.precio_inicial * 1.15 ** edificio.cantidad)
+        
+        calcularCPS();
         cargarDatosJugador(datos)
         cargarEdificios(datos)
     }
+}
+
+function comprarMejora(mejora) {
+    if (datos.datosJuego.coins >= mejora.precio) {
+        datos.datosJuego.coins -= mejora.precio
+        mejora.unlocked = true
+        switch (mejora.consecuencia.efecto) {
+            case "multiplicarEdificio":
+                datos.datosJuego.edificios[mejora.consecuencia.objetivo].produccion *= mejora.consecuencia.cantidad
+                break;
+            
+            case "multiplicarCPC":
+                datos.datosJuego.cpc *= mejora.consecuencia.cantidad
+        }
+
+        calcularCPS();
+        cargarDatosJugador(datos)
+        cargarMejoras(datos)
+    }
+}
+
+function sumar_cps() {
+    datos.datosJuego.coins += datos.datosJuego.cps / 100
+    cargarDatosJugador(datos)
 }
 
 //al cargar la pagina
@@ -89,11 +143,14 @@ window.onload = async () => {
     console.log(datos)
 
     cargarEdificios(datos)
+    cargarMejoras(datos)
     cargarDatosJugador(datos)
     loading_screen.style.display = 'none'
 };
 
-document.getElementById('save').addEventListener('click', save)
-
 //bloque principal
+document.getElementById('save').addEventListener('click', save) //guardado manual
+setInterval(save, 60000) //guardado automatico
+
 document.getElementById('coin').addEventListener('click', click);
+setInterval(sumar_cps, 10)

@@ -47,3 +47,12 @@ body {
         cursor: pointer;
     }
 }
+
+.mejora {
+    width: fit-content;
+    border: solid;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

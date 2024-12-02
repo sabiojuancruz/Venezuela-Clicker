@@ -12,50 +12,75 @@ app.use(express.json());
 app.post('/register', (req, res) => {
     const datosRegistro = req.body;
     const gamedata = {
-        "coins": 0,
-            "cps": 1,
-            "mejoras": {
-                "mejora1": {
-                  "precio": 1,
-                  "unlocked": false
-                },
-                "mejora2": {
-                  "precio": 10,
-                  "unlocked": false
-                },
-                "mejora3": {
-                  "precio": 100,
-                  "unlocked": false
-                },
-                "mejora4": {
-                  "precio": 1000,
-                  "unlocked": false
+          "coins": 0,
+          "cpc": 1,
+          "cps": 0,
+          "mejoras": {
+            "mejoraCPC1": {
+                "precio": 100,
+                "unlocked": false,
+                "consecuencia": {
+                  "efecto": "multiplicarCPC",
+                  "objetivo": "areperas",
+                  "cantidad": 2
                 }
+              },
+            "mejoraAreperas1": {
+              "precio": 100,
+              "unlocked": false,
+              "consecuencia": {
+                "efecto": "multiplicarEdificio",
+                "objetivo": "areperas",
+                "cantidad": 2
+              }
             },
-            "edificios": {
-                "areperas": {
-                    "nombre": "Areperas",
-                    "descripcion": "Pequeños locales que producen arepas.",
-                    "cantidad": 0,
-                    "produccion": 0.1,
-                    "precio": 15
-                },
-                "empanaderas": {
-                    "nombre": "Puesto de empanadas",
-                    "descripcion": "Ventas callejeras de empanadas.",
-                    "cantidad": 0,
-                    "produccion": 1,
-                    "precio": 100
-                },
-                "parrilla": {
-                    "nombre": "Parrilla",
-                    "descripcion": "Puestos que venden carne asada.",
-                    "cantidad": 0,
-                    "produccion": 8,
-                    "precio": 1100
-                }
+            "mejoraEmpanaderas1": {
+              "precio": 1000,
+              "unlocked": false,
+              "consecuencia": {
+                "efecto": "multiplicarEdificio",
+                "objetivo": "empanaderas",
+                "cantidad": 2
+              }
+            },
+            "mejoraParrilla": {
+              "precio": 2000,
+              "unlocked": false,
+              "consecuencia": {
+                "efecto": "multiplicarEdificio",
+                "objetivo": "parrilla",
+                "cantidad": 2
             }
-    }
+          },
+        },
+          "edificios": {
+            "areperas": {
+              "nombre": "Areperas",
+              "descripcion": "Pequeños locales que producen arepas.",
+              "cantidad": 0,
+              "produccion": 0.1,
+              "precio": 15,
+              "precio_inicial": 15
+            },
+            "empanaderas": {
+              "nombre": "Puesto de empanadas",
+              "descripcion": "Ventas callejeras de empanadas.",
+              "cantidad": 0,
+              "produccion": 1,
+              "precio": 100,
+              "precio_inicial": 100
+            },
+            "parrilla": {
+              "nombre": "Parrilla",
+              "descripcion": "Puestos que venden carne asada.",
+              "cantidad": 0,
+              "produccion": 8,
+              "precio": 1100,
+              "precio_inicial": 1100
+            }
+          }
+        }
+
     const datosUsuario = {datosCuenta: datosRegistro, datosJuego: gamedata}
     console.log(`Datos recibidos: ${JSON.stringify(datosUsuario)}`);
 

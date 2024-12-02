@@ -1,51 +1,75 @@
 [
   {
     "datosCuenta": {
-      "username": "pancho25goat",
-      "password": "25panchos"
+      "username": "yuigul",
+      "password": "1234"
     },
     "datosJuego": {
-      "coins": 16,
-      "cps": 0.4,
+      "coins": 798.8080000000909,
+      "cpc": 2,
+      "cps": 89.8,
       "mejoras": {
-        "mejora1": {
-          "precio": 1,
-          "unlocked": false
-        },
-        "mejora2": {
-          "precio": 10,
-          "unlocked": false
-        },
-        "mejora3": {
+        "mejoraCPC1": {
           "precio": 100,
-          "unlocked": false
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarCPC",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
         },
-        "mejora4": {
+        "mejoraAreperas1": {
+          "precio": 100,
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraEmpanaderas1": {
           "precio": 1000,
-          "unlocked": false
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "empanaderas",
+            "cantidad": 2
+          }
+        },
+        "mejoraParrilla": {
+          "precio": 2000,
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "parrilla",
+            "cantidad": 2
+          }
         }
       },
       "edificios": {
         "areperas": {
           "nombre": "Areperas",
           "descripcion": "Pequeños locales que producen arepas.",
-          "cantidad": 4,
-          "produccion": 0.1,
-          "precio": 15
+          "cantidad": 19,
+          "produccion": 0.2,
+          "precio": 214,
+          "precio_inicial": 15
         },
         "empanaderas": {
           "nombre": "Puesto de empanadas",
           "descripcion": "Ventas callejeras de empanadas.",
-          "cantidad": 0,
-          "produccion": 1,
-          "precio": 100
+          "cantidad": 11,
+          "produccion": 2,
+          "precio": 466,
+          "precio_inicial": 100
         },
         "parrilla": {
           "nombre": "Parrilla",
           "descripcion": "Puestos que venden carne asada.",
-          "cantidad": 0,
-          "produccion": 8,
-          "precio": 1100
+          "cantidad": 4,
+          "produccion": 16,
+          "precio": 1924,
+          "precio_inicial": 1100
         }
       }
     }
