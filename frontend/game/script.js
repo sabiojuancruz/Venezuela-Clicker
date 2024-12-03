@@ -10,14 +10,14 @@ let datos = [];
 
 //funciones html
 function cargarEdificios(datos) {
-    building_container.innerHTML = "<h2>Edificios</h2>";
+    building_container.innerHTML = "";
     let edificios = datos.datosJuego.edificios
 
     for (edificio in edificios) {
         let edificio_data = edificios[edificio];
 
         const div = document.createElement('div');
-        div.textContent = edificio;
+        div.textContent = edificio_data.nombre;
 
         const price = document.createElement('p');
         price.textContent = `Precio: ${edificio_data.precio}`;
@@ -84,7 +84,7 @@ function save() {
     .then((response) => response.json())
     .then((data) => {
         if (data.ok) {
-            alert('Guardado con éxito');
+            console.log('Datos guardados correctamente')
         } else {
             alert(`Error`);
         }

@@ -77,6 +77,14 @@ app.post('/register', (req, res) => {
               "produccion": 8,
               "precio": 1100,
               "precio_inicial": 1100
+            },
+            "cacao": {
+              "nombre": "Fabrica de cacao",
+              "descripcion": "Fabricas de cacao.",
+              "cantidad": 0,
+              "produccion": 47,
+              "precio": 12000,
+              "precio_inicial": 12000
             }
           }
         }

@@ -5,9 +5,9 @@
       "password": "1234"
     },
     "datosJuego": {
-      "coins": 798.8080000000909,
+      "coins": 304298.15800049837,
       "cpc": 2,
-      "cps": 89.8,
+      "cps": 420,
       "mejoras": {
         "mejoraCPC1": {
           "precio": 100,
@@ -50,26 +50,117 @@
         "areperas": {
           "nombre": "Areperas",
           "descripcion": "Pequeños locales que producen arepas.",
-          "cantidad": 19,
+          "cantidad": 30,
           "produccion": 0.2,
-          "precio": 214,
+          "precio": 994,
           "precio_inicial": 15
         },
         "empanaderas": {
           "nombre": "Puesto de empanadas",
           "descripcion": "Ventas callejeras de empanadas.",
-          "cantidad": 11,
+          "cantidad": 31,
           "produccion": 2,
-          "precio": 466,
+          "precio": 7615,
           "precio_inicial": 100
         },
         "parrilla": {
           "nombre": "Parrilla",
           "descripcion": "Puestos que venden carne asada.",
-          "cantidad": 4,
+          "cantidad": 22,
           "produccion": 16,
-          "precio": 1924,
+          "precio": 23810,
           "precio_inicial": 1100
+        },
+        "cacao": {
+          "nombre": "Fabrica de cacao",
+          "descripcion": "Fabricas de cacao.",
+          "cantidad": 0,
+          "produccion": 47,
+          "precio": 12000,
+          "precio_inicial": 12000
+        }
+      }
+    }
+  },
+  {
+    "datosCuenta": {
+      "username": "juancho",
+      "password": "1234"
+    },
+    "datosJuego": {
+      "coins": 26273.659999992866,
+      "cpc": 2,
+      "cps": 354,
+      "mejoras": {
+        "mejoraCPC1": {
+          "precio": 100,
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarCPC",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraAreperas1": {
+          "precio": 100,
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraEmpanaderas1": {
+          "precio": 1000,
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "empanaderas",
+            "cantidad": 2
+          }
+        },
+        "mejoraParrilla": {
+          "precio": 2000,
+          "unlocked": true,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "parrilla",
+            "cantidad": 2
+          }
+        }
+      },
+      "edificios": {
+        "areperas": {
+          "nombre": "Areperas",
+          "descripcion": "Pequeños locales que producen arepas.",
+          "cantidad": 10,
+          "produccion": 0.2,
+          "precio": 61,
+          "precio_inicial": 15
+        },
+        "empanaderas": {
+          "nombre": "Puesto de empanadas",
+          "descripcion": "Ventas callejeras de empanadas.",
+          "cantidad": 10,
+          "produccion": 2,
+          "precio": 405,
+          "precio_inicial": 100
+        },
+        "parrilla": {
+          "nombre": "Parrilla",
+          "descripcion": "Puestos que venden carne asada.",
+          "cantidad": 9,
+          "produccion": 16,
+          "precio": 3870,
+          "precio_inicial": 1100
+        },
+        "cacao": {
+          "nombre": "Fabrica de cacao",
+          "descripcion": "Fabricas de cacao.",
+          "cantidad": 4,
+          "produccion": 47,
+          "precio": 20989,
+          "precio_inicial": 12000
         }
       }
     }
