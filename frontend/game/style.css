@@ -30,6 +30,11 @@ body {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .mejoras_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .left {
@@ -65,7 +70,7 @@ body {
 }
 
 .mejora {
-    width: fit-content;
+    width: 30%;
     border: solid;
 
     &:hover {
