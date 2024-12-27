@@ -65,6 +65,30 @@ function cargarDatosJugador(datos) {
     cps_count.textContent = Math.round(datos.datosJuego.cps * 100) / 100
 }
 
+function crearBotonAleatorio() {
+    const boton = document.createElement('button');
+    boton.textContent = 'dolar';
+    boton.style.position = 'absolute';
+    boton.style.zIndex = 1000;
+
+    const posX = Math.random() * (window.innerWidth - 100); 
+    const posY = Math.random() * (window.innerHeight - 50); 
+
+    boton.style.left = `${posX}px`;
+    boton.style.top = `${posY}px`;
+
+    document.body.appendChild(boton);
+
+    setTimeout(() => {
+        boton.remove();
+    }, 5000);
+
+    boton.addEventListener('click', () => {
+        dolarClick();
+        boton.remove();
+    });
+}
+
 //funcionalidad del juego 
 async function obtenerDatos() {
     try {
@@ -213,8 +237,8 @@ function click() {
     datos.datosJuego.coins += datos.datosJuego.cpc;
     datos.datosJuego.total_clicks += 1;
 
-    calcularCPS();
     verificarNivel();
+    calcularCPS();
     cargarDatosJugador(datos);
 }
 
@@ -264,6 +288,45 @@ function sumar_cps() {
     cargarDatosJugador(datos);
 }
 
+function dolarClick() {
+    let randInt = Math.round(Math.random() * 100)
+    if (randInt >= 100) {
+        datos.datosJuego.cpc *= 777;
+
+        setTimeout(() => {
+            datos.datosJuego.cpc /= 777;
+        }, 7000);
+    }
+    else if (randInt <= 100)
+    {
+        for (edificio in datos.datosJuego.edificios) {
+            edificio = datos.datosJuego.edificios[edificio];
+            edificio.produccion *= 7;
+        }
+        datos.datosJuego.cpc *= 7;
+
+        calcularCPS();
+        cargarDatosJugador(datos);
+
+        setTimeout(() => {
+            for (edificio in datos.datosJuego.edificios) {
+                edificio = datos.datosJuego.edificios[edificio];
+                edificio.produccion /= 7;
+            }
+            datos.datosJuego.cpc /= 7;
+    
+            calcularCPS();
+            cargarDatosJugador(datos);
+        }, 7000);
+    }
+    else 
+    {
+        let numero1 = datos.datosJuego.cps * 100
+        let numero2 = datos.datosJuego.cps * 1000
+
+    }
+}
+
 //al cargar la pagina
 window.onload = async () => {
     await obtenerDatos(); 
@@ -277,7 +340,9 @@ window.onload = async () => {
 
 //bloque principal
 save_button.addEventListener('click', save); //guardado manual
-setInterval(save, 6000); //guardado automatico
+//setInterval(save, 6000); //guardado automatico
 
 coin_button.addEventListener('click', click);
 setInterval(sumar_cps, 10);
+
+setInterval(crearBotonAleatorio, 10000)
