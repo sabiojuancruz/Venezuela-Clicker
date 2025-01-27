@@ -1,18 +1,19 @@
 {
   "datosCuenta": {
-    "username": "pancho",
-    "password": "25"
+    "username": "yuigul",
+    "password": "1234"
   },
   "datosJuego": {
     "level": 0,
-    "total_clicks": 0,
-    "coins": 0,
-    "cpc": 1,
-    "cps": 0,
+    "total_clicks": 57,
+    "coins": 4689.151000003929,
+    "total_coins": 5763.151000005895,
+    "cpc": 2,
+    "cps": 12.6,
     "mejoras": {
       "mejoraCPC1": {
         "precio": 100,
-        "unlocked": false,
+        "unlocked": true,
         "consecuencia": {
           "efecto": "multiplicarCPC",
           "objetivo": "areperas",
@@ -21,7 +22,7 @@
       },
       "mejoraAreperas1": {
         "precio": 100,
-        "unlocked": false,
+        "unlocked": true,
         "consecuencia": {
           "efecto": "multiplicarEdificio",
           "objetivo": "areperas",
@@ -30,7 +31,7 @@
       },
       "mejoraEmpanaderas1": {
         "precio": 1000,
-        "unlocked": false,
+        "unlocked": true,
         "consecuencia": {
           "efecto": "multiplicarEdificio",
           "objetivo": "empanaderas",
@@ -51,34 +52,82 @@
       "areperas": {
         "nombre": "Areperas",
         "descripcion": "Pequeños locales que producen arepas.",
-        "cantidad": 0,
-        "produccion": 0.1,
-        "precio": 15,
+        "cantidad": 3,
+        "produccion": 0.2,
+        "precio": 23,
         "precio_inicial": 15
       },
       "empanaderas": {
         "nombre": "Puesto de empanadas",
         "descripcion": "Ventas callejeras de empanadas.",
-        "cantidad": 0,
-        "produccion": 1,
-        "precio": 100,
+        "cantidad": 2,
+        "produccion": 2,
+        "precio": 133,
         "precio_inicial": 100
       },
       "parrilla": {
         "nombre": "Parrilla",
         "descripcion": "Puestos que venden carne asada.",
-        "cantidad": 0,
+        "cantidad": 1,
         "produccion": 8,
-        "precio": 1100,
+        "precio": 1265,
         "precio_inicial": 1100
       },
       "cacao": {
         "nombre": "Fabrica de cacao",
-        "descripcion": "Fabricas de cacao.",
+        "descripcion": "Fabrica cacao.",
         "cantidad": 0,
         "produccion": 47,
         "precio": 12000,
         "precio_inicial": 12000
+      },
+      "helado": {
+        "nombre": "Helados Tio Rico",
+        "descripcion": "Heladeria Tio Rico.",
+        "cantidad": 0,
+        "produccion": 260,
+        "precio": 130000,
+        "precio_inicial": 130000
+      },
+      "ron": {
+        "nombre": "Fabrica de Ron",
+        "descripcion": "Fabrica ron.",
+        "cantidad": 0,
+        "produccion": 47,
+        "precio": 12000,
+        "precio_inicial": 12000
+      },
+      "hato": {
+        "nombre": "Hato Llanero",
+        "descripcion": "Cria ganado y produce cultivos.",
+        "cantidad": 0,
+        "produccion": 1400,
+        "precio": 1400000,
+        "precio_inicial": 1400000
+      },
+      "mineria": {
+        "nombre": "Campamento Minero",
+        "descripcion": "Extrae minerales.",
+        "cantidad": 0,
+        "produccion": 7800,
+        "precio": 20000000,
+        "precio_inicial": 20000000
+      },
+      "petrolera": {
+        "nombre": "PetroRefineria",
+        "descripcion": "Extrae y vende petroleo.",
+        "cantidad": 0,
+        "produccion": 44000,
+        "precio": 330000000,
+        "precio_inicial": 330000000
+      },
+      "moneda": {
+        "nombre": "Fabrica de Papel Moneda",
+        "descripcion": "Fabrica bolivares.",
+        "cantidad": 0,
+        "produccion": 260000,
+        "precio": 5100000000,
+        "precio_inicial": 5100000000
       }
     }
   }

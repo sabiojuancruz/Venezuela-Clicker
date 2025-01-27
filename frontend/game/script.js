@@ -233,8 +233,13 @@ function verificarNivel() {
     }
 }
 
+function verificarLegacy() {
+    
+}
+
 function click() {
     datos.datosJuego.coins += datos.datosJuego.cpc;
+    datos.datosJuego.total_coins += datos.datosJuego.cpc;
     datos.datosJuego.total_clicks += 1;
 
     verificarNivel();
@@ -285,20 +290,23 @@ function comprarMejora(mejora) {
 
 function sumar_cps() {
     datos.datosJuego.coins += datos.datosJuego.cps / 100;
+    datos.datosJuego.total_coins += datos.datosJuego.cps / 100;
     cargarDatosJugador(datos);
 }
 
 function dolarClick() {
-    let randInt = Math.round(Math.random() * 100)
-    if (randInt >= 100) {
+    let randInt = Math.round(Math.random() * 99)
+    if (randInt >= 97) {
         datos.datosJuego.cpc *= 777;
+        console.log('x777')
 
         setTimeout(() => {
             datos.datosJuego.cpc /= 777;
         }, 7000);
     }
-    else if (randInt <= 100)
+    else if (randInt >= 47 && randInt <= 96)
     {
+        console.log('x7')
         for (edificio in datos.datosJuego.edificios) {
             edificio = datos.datosJuego.edificios[edificio];
             edificio.produccion *= 7;
@@ -321,9 +329,9 @@ function dolarClick() {
     }
     else 
     {
-        let numero1 = datos.datosJuego.cps * 100
-        let numero2 = datos.datosJuego.cps * 1000
-
+        datos.datosJuego.coins += datos.datosJuego.cps * 900 + 13
+        console.log('suerte')
+        cargarDatosJugador(datos);
     }
 }
 

@@ -15,6 +15,7 @@ app.post('/register', (req, res) => {
         "level": 0,
         "total_clicks": 0,
         "coins": 0,
+        "total_coins": 0,
         "cpc": 1,
         "cps": 0,
         "mejoras": {
@@ -82,11 +83,59 @@ app.post('/register', (req, res) => {
           },
           "cacao": {
             "nombre": "Fabrica de cacao",
-            "descripcion": "Fabricas de cacao.",
+            "descripcion": "Fabrica cacao.",
             "cantidad": 0,
             "produccion": 47,
             "precio": 12000,
             "precio_inicial": 12000
+          },
+          "helado": {
+            "nombre": "Helados Tio Rico",
+            "descripcion": "Heladeria Tio Rico.",
+            "cantidad": 0,
+            "produccion": 260,
+            "precio": 130000,
+            "precio_inicial": 130000
+          },
+          "ron": {
+            "nombre": "Fabrica de Ron",
+            "descripcion": "Fabrica ron.",
+            "cantidad": 0,
+            "produccion": 47,
+            "precio": 12000,
+            "precio_inicial": 12000
+          },
+          "hato": {
+            "nombre": "Hato Llanero",
+            "descripcion": "Cria ganado y produce cultivos.",
+            "cantidad": 0,
+            "produccion": 1400,
+            "precio": 1400000,
+            "precio_inicial": 1400000
+          },
+          "mineria": {
+            "nombre": "Campamento Minero",
+            "descripcion": "Extrae minerales.",
+            "cantidad": 0,
+            "produccion": 7800,
+            "precio": 20000000,
+            "precio_inicial": 20000000
+          },
+          "petrolera": {
+            "nombre": "PetroRefineria",
+            "descripcion": "Extrae y vende petroleo.",
+            "cantidad": 0,
+            "produccion": 44000,
+            "precio": 330000000,
+            "precio_inicial": 330000000
+          },
+          "moneda": {
+            "nombre": "Fabrica de Papel Moneda",
+            "descripcion": "Fabrica bolivares.",
+            "cantidad": 0,
+            "produccion": 260000,
+            "precio": 5100000000,
+            "precio_inicial": 5100000000
           }
         }
       }
