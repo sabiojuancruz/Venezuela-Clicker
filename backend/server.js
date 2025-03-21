@@ -24,12 +24,47 @@ app.post('/register', (req, res) => {
               "unlocked": false,
               "consecuencia": {
                 "efecto": "multiplicarCPC",
-                "objetivo": "areperas",
                 "cantidad": 2
               }
             },
           "mejoraAreperas1": {
             "precio": 100,
+            "unlocked": false,
+            "consecuencia": {
+              "efecto": "multiplicarEdificio",
+              "objetivo": "areperas",
+              "cantidad": 2
+            }
+           },
+           "mejoraAreperas2": {
+            "precio": 500,
+            "unlocked": false,
+            "consecuencia": {
+              "efecto": "multiplicarEdificio",
+              "objetivo": "areperas",
+              "cantidad": 2
+            }
+           },
+           "mejoraAreperas3": {
+            "precio": 10000,
+            "unlocked": false,
+            "consecuencia": {
+              "efecto": "multiplicarEdificio",
+              "objetivo": "areperas",
+              "cantidad": 2
+            }
+           },
+           "mejoraAreperas4": {
+            "precio": 100000,
+            "unlocked": false,
+            "consecuencia": {
+              "efecto": "sumarPorCantidadDeEdificiosNoAreperas",
+              "objetivo": "areperas",
+              "cantidad": 2
+            }
+           },
+           "mejoraAreperas5": {
+            "precio": 10000000,
             "unlocked": false,
             "consecuencia": {
               "efecto": "multiplicarEdificio",

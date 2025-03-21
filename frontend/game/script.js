@@ -280,6 +280,7 @@ function comprarMejora(mejora) {
             case "multiplicarCPC":
                 datos.datosJuego.cpc *= consecuencia.cantidad;
                 break;
+                
         }
 
         calcularCPS();
@@ -354,3 +355,10 @@ coin_button.addEventListener('click', click);
 setInterval(sumar_cps, 10);
 
 setInterval(crearBotonAleatorio, 10000)
+
+document.addEventListener('keydown', function(event) {
+    if (event.key.toLowerCase() === 's')
+    {
+        save();
+    }
+})
