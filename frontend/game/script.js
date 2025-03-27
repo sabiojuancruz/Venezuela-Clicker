@@ -273,14 +273,19 @@ function comprarMejora(mejora) {
         let consecuencia = mejora.consecuencia;
 
         switch (consecuencia.efecto) {
-            case "multiplicarEdificio":
-                datos.datosJuego.edificios[consecuencia.objetivo].produccion *= consecuencia.cantidad;
-                break;
-            
-            case "multiplicarCPC":
+            case "multiplicarDedos":
+                datos.datosJuego.edificios[consecuencia.objetivo].produccion *= consecuencia.cantidad
+                datos.datosJuego.edificios[consecuencia.objetivo].multiplicador_total *= consecuencia.cantidad
                 datos.datosJuego.cpc *= consecuencia.cantidad;
                 break;
+
+            case "multiplicarEdificio":
+                datos.datosJuego.edificios[consecuencia.objetivo].produccion *= consecuencia.cantidad;
+                datos.datosJuego.edificios[consecuencia.objetivo].multiplicador_total *= consecuencia.cantidad
+                break;
                 
+            case "sumarCantidadPorEdificio":
+                datos.datosJuego.edificios[consecuencia.objetivo].produccion += 0.1 * datos.datosJuego.edificios_totales * multiplicador_total
         }
 
         calcularCPS();
