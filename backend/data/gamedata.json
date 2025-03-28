@@ -1,7 +1,7 @@
 {
   "datosCuenta": {
-    "username": "a",
-    "password": "a"
+    "username": "pancho25",
+    "password": "1234"
   },
   "datosJuego": {
     "level": 0,
@@ -14,6 +14,69 @@
     "mejoras": {
       "mejoraCPC1": {
         "precio": 100,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "multiplicarDedos",
+          "objetivo": "dedos",
+          "cantidad": 2
+        }
+      },
+      "mejoraCPC2": {
+        "precio": 500,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "multiplicarDedos",
+          "objetivo": "dedos",
+          "cantidad": 2
+        }
+      },
+      "mejoraCPC3": {
+        "precio": 10000,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "multiplicarDedos",
+          "objetivo": "dedos",
+          "cantidad": 2
+        }
+      },
+      "mejoraCPC4": {
+        "precio": 100000,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "sumarCantidadPorEdificio",
+          "objetivo": "dedos",
+          "cantidad": 0.1
+        }
+      },
+      "mejoraCPC5": {
+        "precio": 10000000,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "multiplicarDedos",
+          "objetivo": "dedos",
+          "cantidad": 2
+        }
+      },
+      "mejoraCPC6": {
+        "precio": 100000000,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "multiplicarDedos",
+          "objetivo": "dedos",
+          "cantidad": 2
+        }
+      },
+      "mejoraCPC7": {
+        "precio": 1000000000,
+        "unlocked": false,
+        "consecuencia": {
+          "efecto": "multiplicarDedos",
+          "objetivo": "dedos",
+          "cantidad": 2
+        }
+      },
+      "mejoraCPC8": {
+        "precio": 10000000000,
         "unlocked": false,
         "consecuencia": {
           "efecto": "multiplicarDedos",

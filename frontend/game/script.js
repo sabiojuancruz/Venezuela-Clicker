@@ -248,6 +248,11 @@ function click() {
 }
 
 function calcularCPS() {
+    //thousand fingers
+    if (datos.datosJuego.mejoras.mejoraCPC4.unlocked === true) {
+        datos.datosJuego.edificios[consecuencia.objetivo].produccion += 0.1 * (datos.datosJuego.edificios_totales - datos.datosJuego.edificios[consecuencia.objetivo].cantidad) * datos.datosJuego.edificios[consecuencia.objetivo].multiplicador_total
+    }
+
     let edificios = Object.values(datos.datosJuego.edificios);
     datos.datosJuego.cps = edificios.reduce((total, edificio) => total + edificio.cantidad * edificio.produccion, 0);
     datos.datosJuego.cps *= multiplicador;
@@ -258,7 +263,8 @@ function comprarEdificio(edificio) {
         datos.datosJuego.coins -= edificio.precio;
         edificio.cantidad += 1;
         edificio.precio = Math.ceil(edificio.precio_inicial * 1.15 ** edificio.cantidad);
-        
+        datos.datosJuego.edificios_totales++;
+
         calcularCPS();
         cargarDatosJugador(datos);
         cargarEdificios(datos);
@@ -285,7 +291,7 @@ function comprarMejora(mejora) {
                 break;
                 
             case "sumarCantidadPorEdificio":
-                datos.datosJuego.edificios[consecuencia.objetivo].produccion += 0.1 * datos.datosJuego.edificios_totales * multiplicador_total
+                break;
         }
 
         calcularCPS();

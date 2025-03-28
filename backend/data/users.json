@@ -15,7 +15,70 @@
       "mejoras": {
         "mejoraCPC1": {
           "precio": 100,
-          "unlocked": true,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC2": {
+          "precio": 500,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC3": {
+          "precio": 10000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC4": {
+          "precio": 100000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "sumarCantidadPorEdificio",
+            "objetivo": "dedos",
+            "cantidad": 0.1
+          }
+        },
+        "mejoraCPC5": {
+          "precio": 10000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC6": {
+          "precio": 100000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC7": {
+          "precio": 1000000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC8": {
+          "precio": 10000000000,
+          "unlocked": false,
           "consecuencia": {
             "efecto": "multiplicarDedos",
             "objetivo": "dedos",
@@ -149,6 +212,232 @@
           "produccion": 260000,
           "precio": 5100000000,
           "precio_inicial": 5100000000
+        }
+      }
+    }
+  },
+  {
+    "datosCuenta": {
+      "username": "pancho25",
+      "password": "1234"
+    },
+    "datosJuego": {
+      "level": 0,
+      "total_clicks": 0,
+      "coins": 0,
+      "total_coins": 0,
+      "cpc": 1,
+      "cps": 0,
+      "edificios_totales": 0,
+      "mejoras": {
+        "mejoraCPC1": {
+          "precio": 100,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC2": {
+          "precio": 500,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC3": {
+          "precio": 10000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC4": {
+          "precio": 100000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "sumarCantidadPorEdificio",
+            "objetivo": "dedos",
+            "cantidad": 0.1
+          }
+        },
+        "mejoraCPC5": {
+          "precio": 10000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC6": {
+          "precio": 100000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC7": {
+          "precio": 1000000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraCPC8": {
+          "precio": 10000000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarDedos",
+            "objetivo": "dedos",
+            "cantidad": 2
+          }
+        },
+        "mejoraAreperas2": {
+          "precio": 500,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraAreperas3": {
+          "precio": 10000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraAreperas4": {
+          "precio": 100000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "sumarPorCantidadDeEdificiosNoAreperas",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraAreperas5": {
+          "precio": 10000000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "areperas",
+            "cantidad": 2
+          }
+        },
+        "mejoraEmpanaderas1": {
+          "precio": 1000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "empanaderas",
+            "cantidad": 2
+          }
+        },
+        "mejoraParrilla": {
+          "precio": 2000,
+          "unlocked": false,
+          "consecuencia": {
+            "efecto": "multiplicarEdificio",
+            "objetivo": "parrilla",
+            "cantidad": 2
+          }
+        }
+      },
+      "edificios": {
+        "dedos": {
+          "nombre": "Dedos",
+          "descripcion": "Dan click.",
+          "cantidad": 0,
+          "produccion": 0.1,
+          "precio": 15,
+          "precio_inicial": 15,
+          "multiplicador_total": 1
+        },
+        "empanaderas": {
+          "nombre": "Puesto de empanadas",
+          "descripcion": "Ventas callejeras de empanadas.",
+          "cantidad": 0,
+          "produccion": 1,
+          "precio": 100,
+          "precio_inicial": 100,
+          "multiplicador_total": 1
+        },
+        "parrilla": {
+          "nombre": "Parrilla",
+          "descripcion": "Puestos que venden carne asada.",
+          "cantidad": 0,
+          "produccion": 8,
+          "precio": 1100,
+          "precio_inicial": 1100,
+          "multiplicador_total": 1
+        },
+        "cacao": {
+          "nombre": "Fabrica de cacao",
+          "descripcion": "Fabrica cacao.",
+          "cantidad": 0,
+          "produccion": 47,
+          "precio": 12000,
+          "precio_inicial": 12000,
+          "multiplicador_total": 1
+        },
+        "helado": {
+          "nombre": "Helados Tio Rico",
+          "descripcion": "Heladeria Tio Rico.",
+          "cantidad": 0,
+          "produccion": 260,
+          "precio": 130000,
+          "precio_inicial": 130000,
+          "multiplicador_total": 1
+        },
+        "hato": {
+          "nombre": "Hato Llanero",
+          "descripcion": "Cria ganado y produce cultivos.",
+          "cantidad": 0,
+          "produccion": 1400,
+          "precio": 1400000,
+          "precio_inicial": 1400000,
+          "multiplicador_total": 1
+        },
+        "mineria": {
+          "nombre": "Campamento Minero",
+          "descripcion": "Extrae minerales.",
+          "cantidad": 0,
+          "produccion": 7800,
+          "precio": 20000000,
+          "precio_inicial": 20000000,
+          "multiplicador_total": 1
+        },
+        "petrolera": {
+          "nombre": "PetroRefineria",
+          "descripcion": "Extrae y vende petroleo.",
+          "cantidad": 0,
+          "produccion": 44000,
+          "precio": 330000000,
+          "precio_inicial": 330000000,
+          "multiplicador_total": 1
+        },
+        "moneda": {
+          "nombre": "Fabrica de Papel Moneda",
+          "descripcion": "Fabrica bolivares.",
+          "cantidad": 0,
+          "produccion": 260000,
+          "precio": 5100000000,
+          "precio_inicial": 5100000000,
+          "multiplicador_total": 1
         }
       }
     }

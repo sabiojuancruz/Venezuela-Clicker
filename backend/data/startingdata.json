@@ -79,42 +79,6 @@
               "cantidad": 2
             }
           },
-       "mejoraAreperas2": {
-        "precio": 500,
-        "unlocked": false,
-        "consecuencia": {
-          "efecto": "multiplicarEdificio",
-          "objetivo": "areperas",
-          "cantidad": 2
-        }
-       },
-       "mejoraAreperas3": {
-        "precio": 10000,
-        "unlocked": false,
-        "consecuencia": {
-          "efecto": "multiplicarEdificio",
-          "objetivo": "areperas",
-          "cantidad": 2
-        }
-       },
-       "mejoraAreperas4": {
-        "precio": 100000,
-        "unlocked": false,
-        "consecuencia": {
-          "efecto": "sumarPorCantidadDeEdificiosNoAreperas",
-          "objetivo": "areperas",
-          "cantidad": 2
-        }
-       },
-       "mejoraAreperas5": {
-        "precio": 10000000,
-        "unlocked": false,
-        "consecuencia": {
-          "efecto": "multiplicarEdificio",
-          "objetivo": "areperas",
-          "cantidad": 2
-        }
-       },
       "mejoraEmpanaderas1": {
         "precio": 1000,
         "unlocked": false,
@@ -141,7 +105,8 @@
         "cantidad": 0,
         "produccion": 0.1,
         "precio": 15,
-        "precio_inicial": 15
+        "precio_inicial": 15,
+        "multiplicador_total": 1
       },
       "empanaderas": {
         "nombre": "Puesto de empanadas",
@@ -149,7 +114,8 @@
         "cantidad": 0,
         "produccion": 1,
         "precio": 100,
-        "precio_inicial": 100
+        "precio_inicial": 100,
+        "multiplicador_total": 1
       },
       "parrilla": {
         "nombre": "Parrilla",
@@ -157,7 +123,8 @@
         "cantidad": 0,
         "produccion": 8,
         "precio": 1100,
-        "precio_inicial": 1100
+        "precio_inicial": 1100,
+        "multiplicador_total": 1
       },
       "cacao": {
         "nombre": "Fabrica de cacao",
@@ -165,7 +132,8 @@
         "cantidad": 0,
         "produccion": 47,
         "precio": 12000,
-        "precio_inicial": 12000
+        "precio_inicial": 12000,
+        "multiplicador_total": 1
       },
       "helado": {
         "nombre": "Helados Tio Rico",
@@ -173,7 +141,8 @@
         "cantidad": 0,
         "produccion": 260,
         "precio": 130000,
-        "precio_inicial": 130000
+        "precio_inicial": 130000,
+        "multiplicador_total": 1
       },
       "hato": {
         "nombre": "Hato Llanero",
@@ -181,7 +150,8 @@
         "cantidad": 0,
         "produccion": 1400,
         "precio": 1400000,
-        "precio_inicial": 1400000
+        "precio_inicial": 1400000,
+        "multiplicador_total": 1
       },
       "mineria": {
         "nombre": "Campamento Minero",
@@ -189,7 +159,8 @@
         "cantidad": 0,
         "produccion": 7800,
         "precio": 20000000,
-        "precio_inicial": 20000000
+        "precio_inicial": 20000000,
+        "multiplicador_total": 1
       },
       "petrolera": {
         "nombre": "PetroRefineria",
@@ -197,7 +168,8 @@
         "cantidad": 0,
         "produccion": 44000,
         "precio": 330000000,
-        "precio_inicial": 330000000
+        "precio_inicial": 330000000,
+        "multiplicador_total": 1
       },
       "moneda": {
         "nombre": "Fabrica de Papel Moneda",
@@ -205,7 +177,8 @@
         "cantidad": 0,
         "produccion": 260000,
         "precio": 5100000000,
-        "precio_inicial": 5100000000
+        "precio_inicial": 5100000000,
+        "multiplicador_total": 1
       }
     }
   }
